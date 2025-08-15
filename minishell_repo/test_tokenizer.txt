@@ -1,0 +1,42 @@
+echo hola
+ls -l
+
+echo "hola mundo"
+echo 'hola mundo'
+
+echo "hola mundo
+echo 'hola
+
+ls | wc
+echo hola | grep h
+ls || grep archivo
+| echo hola
+echo hola |
+
+echo hola > out
+cat < in
+echo hola >> salida.txt
+cat << EF
+echo > 
+
+echo hola | grep h > out
+cat < in | sort
+echo > archivo | grep algo
+echo "hola > archivo" | grep hola
+
+echo |
+echo | | ls
+| | |
+echo > 
+> echo hola
+>> hola
+
+echo hola; ls
+echo hola \
+echo hola &
+echo hola $
+echo hola *
+
+
+echo        hola     mundo
+

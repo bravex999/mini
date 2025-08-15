@@ -1,0 +1,16 @@
+echo "Hola mundo" > output.txt
+cat < output.txt
+echo "Segunda linea" >> output.txt
+cat output.txt
+ls -la > archivos.txt
+cat archivos.txt
+echo "Test de input" > input.txt
+cat < input.txt
+echo "Append test" >> input.txt
+cat input.txt
+pwd > directorio.txt
+cat directorio.txt
+echo "Combinado" > test.txt
+cat < test.txt > copia.txt
+cat copia.txt
+exit

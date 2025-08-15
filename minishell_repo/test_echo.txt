@@ -1,0 +1,80 @@
+echo
+echo hola
+echo hola mundo
+echo hola mundo test
+echo -n
+echo -n hola
+echo -n hola mundo
+echo -nn
+echo -nn hola
+echo -nnn hola
+echo -nnnn hola mundo
+echo -n -n hola
+echo -n -n -n hola
+echo -n test -n
+echo "hola"
+echo 'hola'
+echo "hola mundo"
+echo 'hola mundo'
+echo "hola" "mundo"
+echo 'hola' 'mundo'
+echo "hola" mundo
+echo hola "mundo"
+echo 'hola' mundo
+echo hola 'mundo'
+echo "hola" 'mundo'
+echo 'hola' "mundo"
+echo -n "hola"
+echo -n 'hola'
+echo -n "hola mundo"
+echo -n 'hola mundo'
+echo -n "hola" "mundo"
+echo -n 'hola' 'mundo'
+echo -n "hola" mundo
+echo -n hola "mundo"
+echo -nn "hola"
+echo -nnn 'hola mundo'
+echo -n -n "hola"
+echo -n -n 'hola' "mundo"
+echo ""
+echo ''
+echo " "
+echo '   '
+echo "   hola   "
+echo '   hola   '
+echo -n ""
+echo -n ''
+echo -n "   "
+echo hola "" mundo
+echo hola '' mundo
+echo "" hola "" mundo ""
+echo -n "" hola
+echo "hola'mundo"
+echo 'hola"mundo'
+echo "hola 'mundo'"
+echo 'hola "mundo"'
+echo -n "hola 'test' mundo"
+echo "echo hola"
+echo 'echo hola'
+echo -n "echo -n test"
+echo hola"mundo"
+echo hola'mundo'
+echo "hola"mundo
+echo 'hola'mundo
+echo -n hola"mundo"test
+echo -n"hola"
+echo -n'hola'
+echo -n "'"
+echo -n '"'
+echo "-n"
+echo '-n'
+echo "-n hola"
+echo -n "-n"
+echo test -n test
+echo -nhola
+echo -n-n
+echo -n -nhola
+echo "   "   "   "
+echo a b c d e f g h i j k l m n
+echo -n a b c d e f g h i j k l m n
+exit

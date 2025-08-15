@@ -1,0 +1,22 @@
+total 684
+drwxrwxr-x 7 naranjox naranjox   4096 ago 15 16:45 .
+drwxrwxr-x 3 naranjox naranjox   4096 ago 13 13:27 ..
+-rw-r--r-- 1 naranjox naranjox      0 ago 15 16:45 archivos.txt
+drwxrwxr-x 2 naranjox naranjox   4096 ago 15 16:45 built
+-rw-r--r-- 1 naranjox naranjox     10 ago 15 16:21 copia.txt
+-rw-r--r-- 1 naranjox naranjox     40 ago 15 16:21 directorio.txt
+drwxrwxr-x 8 naranjox naranjox   4096 ago 15 15:29 .git
+drwxrwxr-x 2 naranjox naranjox   4096 ago 15 15:58 includes
+-rw-r--r-- 1 naranjox naranjox     26 ago 15 16:21 input.txt
+drwxrwxr-x 2 naranjox naranjox   4096 ago 15 16:45 libft
+-rw-rw-r-- 1 naranjox naranjox   1358 ago 15 16:02 Makefile
+-rwxrwxr-x 1 naranjox naranjox 572440 ago 15 16:45 minishell
+-rw-rw-r-- 1 naranjox naranjox  49436 ago 15 16:30 minishell_repo.zip
+-rw-r--r-- 1 naranjox naranjox     25 ago 15 16:45 output.txt
+drwxrwxr-x 2 naranjox naranjox   4096 ago 15 16:45 srcs
+-rwxrwxr-x 1 naranjox naranjox   2387 ago  6 16:31 test_echo.sh
+-rwxrwxr-x 1 naranjox naranjox   1346 ago  6 16:49 test_echo.txt
+-rw-rw-r-- 1 naranjox naranjox    548 ago 13 13:10 test_heredoc1.txt
+-rw-rw-r-- 1 naranjox naranjox    346 ago 15 16:07 testing.txt
+-rw-rw-r-- 1 naranjox naranjox    471 jul 24 19:56 test_tokenizer.txt
+-rw-r--r-- 1 naranjox naranjox     10 ago 15 16:21 test.txt

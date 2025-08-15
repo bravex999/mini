@@ -1,0 +1,26 @@
+#--- PRUEBA BÁSICA ---
+cat << EOF
+esto es una prueba
+con varias lineas
+EOF
+# --- PRUEBA DE EXPANSIÓN (DEBERÍA MOSTRAR TU NOMBRE DE USUARIO) ---
+cat << EOF
+hola, $USER
+EOF
+# --- PRUEBA SIN EXPANSIÓN (DEBERÍA MOSTRAR '$USER' LITERALMENTE) ---
+cat << "EOF"
+hola, $USER
+EOF
+# --- PRUEBA DE HEREDOCS MÚLTIPLES (SOLO DEBE MOSTRAR 'final') ---
+cat << A << B
+intermedio
+A
+final
+B
+# --- PRUEBA CON DELIMITADOR DIFERENTE ---
+cat << stop
+el final es 'stop'
+stop
+# --- PRUEBA DE HEREDOC VACÍO (DEBERÍA IMPRIMIR UNA LÍNEA EN BLANCO) ---
+cat << EOF
+EOF
