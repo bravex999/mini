@@ -33,3 +33,19 @@ void free_commands(t_cmd *command_list)
         current = next;
     }
 }
+
+void    free_tokens(t_token *token_list)
+{
+    t_token *current;
+    t_token *next;
+
+    current = token_list;
+    while (current)
+    {
+        next = current->next;
+        free(current->str);
+        free(current);
+        current = next;
+    }
+ }
+

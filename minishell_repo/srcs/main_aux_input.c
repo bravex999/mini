@@ -18,10 +18,9 @@ int	check_ctrl_d(char *line)
 
 int	handle_ctrl_c_signal(char **line)
 {
-	printf("Checking g_signal: %d\n", g_signal);  // <- TEMPORAL
+	printf("Checking g_signal: %d\n", g_signal);
 	if (g_signal == SIGINT)
 	{
-		printf("Calling handle_ctrl_c\n");  // <- TEMPORAL
 		return (handle_ctrl_c(line));
 	}	
 	return (0);
