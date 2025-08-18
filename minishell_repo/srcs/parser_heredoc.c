@@ -24,7 +24,6 @@ char	*read_all_fd(int fd)
 	return (res);
 }
 
-
 static int	process_all_heredocs(t_cmd *cmd, t_token *tokens, t_shell *shell)
 {
 	int		quoted;
@@ -40,11 +39,10 @@ static int	process_all_heredocs(t_cmd *cmd, t_token *tokens, t_shell *shell)
 			cmd->heredoc_delimiter = ft_strdup(current->next->str);
 			if (cmd->heredoc_content)
 				free(cmd->heredoc_content);
-			if (current->next->type == T_QUOTED_SINGLE || current->next->type == T_QUOTED_DOUBLE)
-				quoted = 1;
-			else
-				quoted = 0;
-			cmd->heredoc_content = heredoc_collect(current->next->str, quoted, shell);
+			quoted = (current->next->type == T_QUOTED_SINGLE
+					|| current->next->type == T_QUOTED_DOUBLE);
+			cmd->heredoc_content = heredoc_collect(current->next->str,
+					quoted, shell);
 			if (!cmd->heredoc_content)
 				return (1);
 		}
