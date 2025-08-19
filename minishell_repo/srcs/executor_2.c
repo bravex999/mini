@@ -16,6 +16,7 @@ static ssize_t	write_all_heredoc(int fd, const char *s)
 	size_t	len;
 	size_t	off;
 	ssize_t	n;
+	ssize_t	ret;
 
 	len = ft_strlen(s);
 	off = 0;
@@ -26,7 +27,8 @@ static ssize_t	write_all_heredoc(int fd, const char *s)
 			break ;
 		off += (size_t)n;
 	}
-	return (ssize_t)off;
+	ret = (ssize_t)off;
+	return (ret);
 }
 
 int	setup_heredoc_stdin(t_cmd *cmd, int *saved_stdin)
@@ -56,4 +58,3 @@ int	setup_heredoc_stdin(t_cmd *cmd, int *saved_stdin)
 		return (-1);
 	return (0);
 }
-
