@@ -1,6 +1,6 @@
 #include "minishell.h"
 
-static int	process_heredoc_line(char **full_content, char *line, int quoted, t_shell *shell)
+static int	hline(char **full_content, char *line, int quoted, t_shell *shell)
 {
 	char	*temp_join;
 	char	*temp_line;
@@ -44,7 +44,7 @@ char	*read_heredoc_content(char *delimiter, int quoted, t_shell *shell)
 			free(line);
 			break ;
 		}
-		if (process_heredoc_line(&full_content, line, quoted, shell) != 0)
+		if (hline(&full_content, line, quoted, shell) != 0)
 			return (NULL);
 	}
 	return (full_content);

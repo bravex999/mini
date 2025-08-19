@@ -28,7 +28,7 @@ char	**ultra_split(t_token *token_list)
 	word = 0;
 	i = 0;
 	argv = NULL;
-	while (current)		
+	while (current)
 	{
 		word++;
 		current = current->next;

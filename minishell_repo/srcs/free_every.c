@@ -2,50 +2,49 @@
 
 void	free_everything(char *line, t_token *tokens, t_cmd *cmds)
 {
-	if(line)
+	if (line)
 		free(line);
-	if(tokens)
+	if (tokens)
 		free_tokens(tokens);
-	if(cmds)
+	if (cmds)
 		free_commands(cmds);
 }
 
-void free_commands(t_cmd *command_list)
+void	free_commands(t_cmd *command_list)
 {
-    t_cmd *current;
-    t_cmd *next;
+	t_cmd	*current;
+	t_cmd	*next;
 
-    current = command_list;
-    while(current)
-    {
-        next = current->next;
-        if (current->argv)
-            str_free(current->argv);
-        if(current->infile)
-            free(current->infile);
-        if(current->outfile)
-            free(current->outfile);
-        if(current->heredoc_delimiter)
-            free(current->heredoc_delimiter);
-        if(current->heredoc_content)
-            free(current->heredoc_content);
-        free(current);
-        current = next;
-    }
+	current = command_list;
+	while (current)
+	{
+		next = current->next;
+		if (current->argv)
+			str_free(current->argv);
+		if (current->infile)
+			free(current->infile);
+		if (current->outfile)
+			free(current->outfile);
+		if (current->heredoc_delimiter)
+			free(current->heredoc_delimiter);
+		if (current->heredoc_content)
+			free(current->heredoc_content);
+		free(current);
+		current = next;
+	}
 }
 
-void    free_tokens(t_token *token_list)
+void	free_tokens(t_token *token_list)
 {
-    t_token *current;
-    t_token *next;
+	t_token	*current;
+	t_token	*next;
 
-    current = token_list;
-    while (current)
-    {
-        next = current->next;
-        free(current->str);
-        free(current);
-        current = next;
-    }
- }
-
+	current = token_list;
+	while (current)
+	{
+		next = current->next;
+		free(current->str);
+		free(current);
+		current = next;
+	}
+}
