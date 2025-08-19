@@ -34,11 +34,11 @@ static char	*search_in_path_dirs(char *cmd, char **path_dirs)
 
 char	*resolve_command_path(char *cmd, t_shell *shell)
 {
-	(void)shell;
 	char	*path_env;
 	char	**path_dirs;
 	char	*resolved_path;
 
+	(void)shell;
 	if (!cmd || !*cmd)
 		return (NULL);
 	if (ft_strchr(cmd, '/'))

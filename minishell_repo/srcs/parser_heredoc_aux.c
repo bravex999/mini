@@ -6,7 +6,6 @@ void	execute_child(int write_fd, char *delimiter, int quoted, t_shell *shell)
 
 	signal(SIGINT, SIG_DFL);
 	signal(SIGQUIT, SIG_IGN);
-/*	close(write_fd);*/
 	buf = read_heredoc_content(delimiter, quoted, shell);
 	if (buf)
 	{
@@ -31,7 +30,6 @@ char	*handle_heredoc_status(int status, char *content, t_shell *shell)
 	}
 	return (content);
 }
-
 
 char	*heredoc_collect(char *delimiter, int quoted, t_shell *shell)
 {
