@@ -1,6 +1,6 @@
 #include "minishell.h"
 
-void	execute_child(int write_fd, char *delimiter, int quoted, t_shell *shell)
+void	ex_child(int write_fd, char *delimiter, int quoted, t_shell *shell)
 {
 	char	*buf;
 
@@ -48,7 +48,7 @@ char	*heredoc_collect(char *delimiter, int quoted, t_shell *shell)
 		return (NULL);
 	}
 	if (pid == 0)
-		execute_child(p[1], delimiter, quoted, shell);
+		ex_child(p[1], delimiter, quoted, shell);
 	close(p[1]);
 	content = read_all_fd(p[0]);
 	close(p[0]);
