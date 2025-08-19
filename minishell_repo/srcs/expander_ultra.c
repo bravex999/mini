@@ -5,14 +5,25 @@ char	*build_expanded_string(char *original_str, t_shell *shell);
 t_token	*split_to_tokens(char *str);
 char	*ft_strjoin_and_free(char *s1, char *s2);
 
+static void	set_join_next_on_last(t_token *list, int join_next)
+{
+	t_token	*last;
+
+	if (!list || !join_next)
+		return ;
+	last = list;
+	while (last->next)
+		last = last->next;
+	last->join_next = join_next;
+}
+
 t_token	*expander_ultra(t_token *token, t_shell *shell)
 {
 	char	*expanded_str;
 	t_token	*new_token_list;
-	t_token *last;
 
 	expanded_str = build_expanded_string(token->str, shell);
-	if (!expanded_str)
+	if (expanded_str == NULL)
 		return (NULL);
 	if (token->type == T_QUOTED_DOUBLE)
 	{
@@ -23,13 +34,7 @@ t_token	*expander_ultra(t_token *token, t_shell *shell)
 	else
 	{
 		new_token_list = split_to_tokens(expanded_str);
-		if(new_token_list && token->join_next)
-		{
-			last = new_token_list;
-			while(last->next)
-				last = last->next;
-			last->join_next = token->join_next;
-		}	
+		set_join_next_on_last(new_token_list, token->join_next);
 		free(expanded_str);
 	}
 	return (new_token_list);
@@ -63,7 +68,7 @@ char	*find_var_value(char *var_name, t_shell *shell)
 	if (!var_name || *var_name == '\0')
 		return ("$");
 	if (ft_strcmp(var_name, "?") == 0)
-		return (ft_itoa(shell->last_status));	
+		return (ft_itoa(shell->last_status));
 	i = 0;
 	len = ft_strlen(var_name);
 	while (shell->envp[i])

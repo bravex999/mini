@@ -24,6 +24,17 @@ static t_token	*process_join_sequence(t_token **list_cursor)
 	return (create_token_safe(T_WORD, final_str));
 }
 
+static	t_token	*dup_and_advance(t_token **cur)
+{
+	t_token	*t;
+
+	t = create_token_safe((*cur)->type, ft_strdup((*cur)->str));
+	if (t)
+		t->join_next = (*cur)->join_next;
+	*cur = (*cur)->next;
+	return (t);
+}
+
 t_token	*finalize_and_join_tokens(t_token *list)
 {
 	t_token	*final_list;
@@ -34,18 +45,11 @@ t_token	*finalize_and_join_tokens(t_token *list)
 	current = list;
 	while (current)
 	{
-		if (current->join_next == 1 && current->next
+		if (current->join_next && current->next
 			&& is_token_word(current) && is_token_word(current->next))
-		{
 			new_token = process_join_sequence(&current);
-		}
 		else
-		{
-			new_token = create_token_safe(current->type, ft_strdup(current->str));
-			if (new_token)
-				new_token->join_next = current->join_next;
-			current = current->next;
-		}
+			new_token = dup_and_advance(&current);
 		if (!new_token)
 			return (free_tokens(final_list), NULL);
 		add_token(&final_list, new_token);
